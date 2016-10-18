@@ -1,0 +1,48 @@
+.swatch {
+	flex: 1 0 5rem;
+	overflow: hidden;
+	padding: 1.5rem .5rem;
+	min-width: 10rem;
+	margin: .5rem;
+	background: grey;
+	cursor: hand; 
+	cursor: pointer;
+
+	text-align: center;
+
+	@include transition(all .3s ease);
+
+	@media screen and (max-width: 400px) {
+		width: 100%;
+		margin: .5rem 0;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&--full-screen {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+
+		&:hover {
+			transform: none;
+		}
+	}
+}
+
+.swatch__code,
+.swatch__hex,
+.swatch__rgb {
+	display: block;
+}
+
+.swatch__hex,
+.swatch__rgb {
+	@include fs(12px);
+}

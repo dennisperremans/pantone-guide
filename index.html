@@ -1,0 +1,44 @@
+<!--
+<?php
+	// Get array of Pantone data from json file
+	$pantone_json = file_get_contents('src/js/colors.json');
+	$pantone = json_decode($pantone_json,true);
+?>-->
+<html>
+<head>
+	<title>
+		Pantone colors
+	</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dist/style.css">
+</head>
+<body>
+<header class="primary-header">
+	<h1>Pantones</h1>
+
+	<input class="input input--search" placeholder="Search code, rgb or hex" />
+</header>
+
+<main class="list flex-grid" id="list">
+	<!-- loop over this -->
+		<div class="swatch" style="background-color: #0077EE; color:#000000;">
+			<div class="swatch__content">
+				<span class="swatch__code">
+					200
+				</span>
+				<span class="swatch__rgb">
+					225 33 44
+				</span>
+				<span class="swatch__hex">
+					#0077EE
+				</span>
+			</div>
+		</div>
+	<!-- end loop -->
+</main>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="src/js/app.js"></script>
+</body>
+</html>
