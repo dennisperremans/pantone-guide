@@ -34,6 +34,7 @@
 		width: 100%;
 		padding: 0;
 		margin: 0;
+		cursor: auto;
 
 		&:hover {
 			transform: none;
@@ -73,7 +74,16 @@
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
+	cursor: hand;
+	cursor: pointer;
 	
 	@include fs(36px);
+	@include lh(36px);
 	color: $white;
+
+	@include transition(all .2s ease);
+
+	&:hover {
+		transform: rotate(360deg);
+	}
 }

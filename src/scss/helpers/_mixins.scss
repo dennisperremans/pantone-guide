@@ -8,6 +8,11 @@
   font-size: calculateRem($size);
 }
 
+@mixin lh($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
 @mixin transition($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;
