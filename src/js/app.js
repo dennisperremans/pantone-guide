@@ -34,6 +34,22 @@ $(function() {
         });
     });
 
+	var swatchOpen = false;
+
+	$('.swatch').click(function(){
+		if(!swatchOpen) {
+			$(this).addClass('swatch--full-screen');
+			$("<i class='fa fa-close swatch__close-icon'></i>").appendTo($(this));
+
+			swatchOpen = true;
+		} else {
+			$(this).removeClass('swatch--full-screen');
+			$(".fa-close").remove();
+
+			swatchOpen = false;
+		}
+	});
+
 
 });
 

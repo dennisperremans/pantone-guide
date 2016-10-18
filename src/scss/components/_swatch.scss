@@ -18,11 +18,12 @@
 	}
 
 	&:hover {
-		transform: scale(1.1);
+		transform: scale(1.05);
 	}
 
 	&--full-screen {
 		position: absolute;
+		z-index: 10;
 		top: 0;
 		left: 0;
 		height: 100%;
@@ -32,6 +33,16 @@
 
 		&:hover {
 			transform: none;
+		}
+
+		.swatch__content {
+			@include vertical-align();
+		}
+
+		.swatch__code,
+		.swatch__hex,
+		.swatch__rgb {
+			@include fs(50px);
 		}
 	}
 }
@@ -45,4 +56,13 @@
 .swatch__hex,
 .swatch__rgb {
 	@include fs(12px);
+}
+
+.swatch__close-icon {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	
+	@include fs(36px);
+	color: $white;
 }
