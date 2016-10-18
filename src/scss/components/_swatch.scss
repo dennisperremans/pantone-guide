@@ -21,7 +21,7 @@
 
 	&:hover {
 		border: 1px solid $white;
-		box-shadow: 5px 5px 0px 0px rgba($black , .75);
+		box-shadow: 5px 5px 0px 0px rgba($black, .75);
 		transform: translate(-5px, -5px);
 	}
 
@@ -65,13 +65,8 @@
 .swatch__hex,
 .swatch__rgb,
 .swatch__cmyk {
-	display: block;
-}
-
-.swatch__hex,
-.swatch__rgb,
-.swatch__cmyk {
 	@include fs(12px);
+	display: block;
 }
 
 .swatch__close-icon {

@@ -1,7 +1,6 @@
 .flex-grid {
 	display: flex;
 	flex-wrap: wrap;
-	//margin: -.5rem;
 
 	@media screen and (max-width: 400px) {
 		display: block;
