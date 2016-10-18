@@ -40,10 +40,10 @@
 					<? echo $value["Code"]; ?>
 				</span>
 				<span class="swatch__rgb">
-					<? echo $value["R"] .','. $value["G"] .','. $value["B"]; ?>
+					<? echo $value["R"] .', '. $value["G"] .', '. $value["B"]; ?>
 				</span>
 				<span class="swatch__cmyk">
-					<? echo $value["C"] .','. $value["M"] .','. $value["Y"].','. $value["K"]; ?>
+					<? echo $value["C"] .', '. $value["M"] .', '. $value["Y"].', '. $value["K"]; ?>
 				</span>
 				<span class="swatch__hex">
 					<? echo $value["Hex"]; ?>
