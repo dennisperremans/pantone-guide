@@ -11,7 +11,7 @@
 	</title>
 	
 	<script src="https://use.fontawesome.com/6cd3b02210.js"></script>
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="dist/style.css">
 </head>
@@ -23,21 +23,41 @@
 </header>
 
 <main class="list flex-grid" id="list">
+	<!--
+	<?php
+	// iterate through data array and output each item formatted
+	foreach ($pantone as $key => $value) {
+	    // add "Pantone" to beginning of Code title if just a number
+	    if (ctype_digit(substr($value["Code"], 0, 3))) {
+	        $pantone_title = "Pantone " . $value["Code"];
+	    } else {
+	        $pantone_title = $value["Code"];
+	    }
+	    echo "
+	?>
+	-->
 	<!-- loop over this -->
-		<div class="swatch" style="background-color: #0077EE; color:#000000;">
+		<div class="swatch" style="background-color: #0077EE; color:#000000;"> <!-- $value["Hex"] -->
 			<div class="swatch__content">
 				<span class="swatch__code">
-					200
+					200 <!-- $value["Code"] -->
 				</span>
 				<span class="swatch__rgb">
-					225 33 44
+					225 33 44 <!-- $value["R"] $value["G"] $value["B"] -->
+				</span>
+				<span class="swatch__cmyk">
+					100 33 44 87 <!-- $value["C"] $value["M"] $value["Y"] $value["K"] -->
 				</span>
 				<span class="swatch__hex">
-					#0077EE
+					#0077EE <!-- $value["Hex"] -->
 				</span>
 			</div>
 		</div>
 	<!-- end loop -->
+	<!--
+	}
+	?>
+	-->
 </main>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

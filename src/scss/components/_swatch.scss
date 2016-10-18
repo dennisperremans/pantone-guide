@@ -41,7 +41,8 @@
 
 		.swatch__code,
 		.swatch__hex,
-		.swatch__rgb {
+		.swatch__rgb,
+		.swatch__cmyk {
 			@include fs(50px);
 		}
 	}
@@ -49,12 +50,14 @@
 
 .swatch__code,
 .swatch__hex,
-.swatch__rgb {
+.swatch__rgb,
+.swatch__cmyk {
 	display: block;
 }
 
 .swatch__hex,
-.swatch__rgb {
+.swatch__rgb,
+.swatch__cmyk {
 	@include fs(12px);
 }
 

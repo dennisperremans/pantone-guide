@@ -36,20 +36,21 @@ $(function() {
 
 	var swatchOpen = false;
 
-	$('.swatch').click(function(){
+	$('.swatch').click(function(event){
 		if(!swatchOpen) {
 			$(this).addClass('swatch--full-screen');
 			$("<i class='fa fa-close swatch__close-icon'></i>").appendTo($(this));
 
 			swatchOpen = true;
 		} else {
-			$(this).removeClass('swatch--full-screen');
-			$(".fa-close").remove();
-
 			swatchOpen = false;
 		}
 	});
 
+	$('body').on('click', '.fa-close', function() {
+    	$('.swatch--full-screen').removeClass('swatch--full-screen');
+		$(".fa-close").remove();
+	});
 
 });
 
