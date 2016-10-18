@@ -1,9 +1,8 @@
-<!--
 <?php
 	// Get array of Pantone data from json file
 	$pantone_json = file_get_contents('src/js/colors.json');
 	$pantone = json_decode($pantone_json,true);
-?>-->
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +24,6 @@
 </header>
 
 <main class="list flex-grid" id="list">
-	<!--
 	<?php
 	// iterate through data array and output each item formatted
 	foreach ($pantone as $key => $value) {
@@ -35,48 +33,27 @@
 	    } else {
 	        $pantone_title = $value["Code"];
 	    }
-	    echo "
 	?>
-	-->
-	<!-- loop over this -->
-		<div class="swatch" style="background-color: #0077EE; color:#000000;"> <!-- $value["Hex"] -->
+		<div class="swatch" style="background-color: <?php echo $value['Hex']; ?>; color:#000000;">
 			<div class="swatch__content">
 				<span class="swatch__code">
-					200 <!-- $value["Code"] -->
+					<? echo $value["Code"]; ?>
 				</span>
 				<span class="swatch__rgb">
-					225 33 44 <!-- $value["R"] $value["G"] $value["B"] -->
+					<? echo $value["R"] .','. $value["G"] .','. $value["B"]; ?>
 				</span>
 				<span class="swatch__cmyk">
-					100 33 44 87 <!-- $value["C"] $value["M"] $value["Y"] $value["K"] -->
+					<? echo $value["C"] .','. $value["M"] .','. $value["Y"].','. $value["K"]; ?>
 				</span>
 				<span class="swatch__hex">
-					#0077EE <!-- $value["Hex"] -->
+					<? echo $value["Hex"]; ?>
 				</span>
 			</div>
 		</div>
 
-		<div class="swatch" style="background-color: #111111;"> <!-- $value["Hex"] -->
-			<div class="swatch__content">
-				<span class="swatch__code">
-					900 <!-- $value["Code"] -->
-				</span>
-				<span class="swatch__rgb">
-					1 1 1 <!-- $value["R"] $value["G"] $value["B"] -->
-				</span>
-				<span class="swatch__cmyk">
-					1 1 1 1 <!-- $value["C"] $value["M"] $value["Y"] $value["K"] -->
-				</span>
-				<span class="swatch__hex">
-					#111111 <!-- $value["Hex"] -->
-				</span>
-			</div>
-		</div>
-	<!-- end loop -->
-	<!--
+	<?php
 	}
 	?>
-	-->
 </main>
 
 <footer class="primary-footer">
