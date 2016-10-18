@@ -4,10 +4,12 @@
 	$pantone_json = file_get_contents('src/js/colors.json');
 	$pantone = json_decode($pantone_json,true);
 ?>-->
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>
-		Pantone colors
+		Pantone guide
 	</title>
 	
 	<script src="https://use.fontawesome.com/6cd3b02210.js"></script>
@@ -19,7 +21,7 @@
 <header class="primary-header">
 	<h1>Pantones</h1>
 
-	<input class="input input--search" placeholder="Search code, rgb or hex" />
+	<input class="input input--search" placeholder="Search pms, rgb, cmyk or hex" />
 </header>
 
 <main class="list flex-grid" id="list">
@@ -76,6 +78,10 @@
 	?>
 	-->
 </main>
+
+<footer class="primary-footer">
+	Pantone guide - PANTONE® and other Pantone, Inc. trademarks are the property of Pantone, Inc.
+</footer>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="src/js/app.js"></script>

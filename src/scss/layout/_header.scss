@@ -1,6 +1,10 @@
 .primary-header {
 	padding: 1rem;
 	margin-bottom: 2rem;
-	
+
 	text-align: center;
+
+	@media screen and (max-width: 400px) {
+		padding: 1rem 0;
+	}
 }
