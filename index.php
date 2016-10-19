@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>
-		Pantone guide
+		Pantone color guide
 	</title>
 	
 	<script src="https://use.fontawesome.com/6cd3b02210.js"></script>
