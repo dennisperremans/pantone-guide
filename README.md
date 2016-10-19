@@ -2,6 +2,8 @@
 
 Search pms, rgb, cmyk and hex colors
 
+Check the [DEMO](http://gojira.be/pantone/)
+
 ## To do
 1. Load colors from json file
 2. Clean up JS
