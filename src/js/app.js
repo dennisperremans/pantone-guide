@@ -39,14 +39,14 @@ $(function() {
 
 	$('.swatch').click(function(event){
 		if(!swatchOpen) {
+			$(this).addClass('swatch--full-screen');
+			$("<i class='fa fa-close swatch__close-icon'></i>").appendTo($(this));
+
 			//get top screen current position
 			var screenTop = $(document).scrollTop();
 
 			//swatch--full-screen and set top
 			$('.swatch--full-screen').css('top', screenTop);
-
-			$(this).addClass('swatch--full-screen');
-			$("<i class='fa fa-close swatch__close-icon'></i>").appendTo($(this));
 
 			swatchOpen = true;
 		} else {
